@@ -3,6 +3,11 @@ let spaceKey = document.querySelector('.space_key');
 let shift_left = document.querySelector('.shift_left');
 let shift_right = document.querySelector('.shift_right');
 let caps_lock_key = document.querySelector('.caps_lock_key');
+let enter_key = document.querySelector('.enter_key');
+let arrow_up = document.querySelector('.arrow_up');
+let arrow_left = document.querySelector('.arrow_left');
+let arrow_down = document.querySelector('.arrow_down');
+let arrow_right = document.querySelector('.arrow_right');
 let toggle_circle = document.querySelector('.toggle_circle');
 let night_mode = document.querySelector('.night_mode');
 let body = document.querySelector('body');
@@ -32,10 +37,15 @@ window.addEventListener('keydown', function(e) {
             shift_left.classList.remove('active')
         }
         if(e.code == 'CapsLock') {
-            caps_lock_key.classList.toggle('active');
+            caps_lock_key.classList.toggle('active')
         }
+        if(e.code == 'ENTER') {
+          enter_key.classList.remove('active')
+      }
     }
 })
+
+
 window.addEventListener('keyup', function(e) {
   for(let i = 0; i < keys.length; i++) {
       if(e.key == keys[i].getAttribute('keyname' ) || e.key == keys[i].getAttribute('lowerCaseName')) {
@@ -54,6 +64,10 @@ window.addEventListener('keyup', function(e) {
           shift_left.classList.remove('active')
           shift_left.classList.remove('remove')
       }
+      if(e.code == 'ENTER') {
+        enter_key.classList.remove('active')
+        enter_key.classList.remove('remove')
+    }
       setTimeout(()=> {
           keys[i].classList.remove('remove')
       },200)
