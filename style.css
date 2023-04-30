@@ -67,12 +67,17 @@ body {
 }
 
 .shift_key {
-    width: 124px;
+    width: 132px;
 }
 
 .space_key {
-    max-width: 600px;
+    max-width: 430px;
     width: 100%;
+}
+.arrow_key {
+  width: 70px;
+  background-color: #b9b3b3;
+  
 }
 
 .text {
@@ -205,4 +210,6 @@ body.active {
     width: 100%;
     height: 100%;
 }
+
+
 
