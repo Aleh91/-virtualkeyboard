@@ -46,6 +46,11 @@ body {
     z-index: 5;
 }
 
+.keys:hover {
+  background-color: #bcb120;
+  cursor: pointer;
+}
+
 .backspace_key {
     width: 120px;
 }
@@ -172,6 +177,11 @@ body.active {
 
 .keys.keys_night.remove {
     animation: keys_night_animation 0.5s forwards;
+}
+
+.keys.keys_night:hover {
+  background-color: #b9b3b3;
+  color: #fff;
 }
 
 @keyframes keys_night_animation {
